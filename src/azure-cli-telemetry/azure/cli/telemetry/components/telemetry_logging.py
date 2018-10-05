@@ -43,6 +43,7 @@ def _ensure_telemetry_log_folder(config_dir):
     try:
         ret = os.path.join(config_dir, TELEMETRY_LOG_DIR)
         if not os.path.isdir(ret):
+            print("hello! - don't check this in!")
             os.makedirs(ret)
         return ret
     except (OSError, IOError, TypeError):
